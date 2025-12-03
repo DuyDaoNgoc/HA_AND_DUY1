@@ -19,15 +19,111 @@
     <header class="header">
       <div class="container mx-auto px-8">
         <div class="flex justify-center">
-          <h1 class="text-3xl font-heading font-bold text-primary">
-            LankaStay
-          </h1>
+          <a href="/">
+            <h1 class="text-3xl font-heading font-bold text-primary">
+              LankaStay
+            </h1>
+          </a>
         </div>
       </div>
     </header>
 
     <!-- Main Success Content -->
     <main class="py-16 px-8">
+      <section class="bg-neutral-50 py-12" id="progress-section">
+        <div class="container mx-auto px-8 max-w-4xl">
+          <div
+            class="flex items-center justify-between relative"
+            role="progressbar"
+            aria-valuenow="3"
+            aria-valuemin="1"
+            aria-valuemax="3"
+          >
+            <!-- Step 1 - Completed -->
+            <div class="flex flex-col items-center flex-1 relative z-10">
+              <div
+                class="w-12 h-12 rounded-full bg-success flex items-center justify-center text-neutral-50 font-semibold transition-transform duration-200 hover:scale-105"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
+              <span class="mt-2 text-sm font-medium text-neutral-700"
+                >Details</span
+              >
+            </div>
+
+            <!-- Connector Line 1 -->
+            <div class="flex-1 h-1 bg-success mx-2 -mt-6"></div>
+
+            <!-- Step 2 - Completed -->
+            <div class="flex flex-col items-center flex-1 relative z-10">
+              <div
+                class="w-12 h-12 rounded-full bg-success flex items-center justify-center text-neutral-50 font-semibold transition-transform duration-200 hover:scale-105"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
+              <span class="mt-2 text-sm font-medium text-neutral-700"
+                >Review</span
+              >
+            </div>
+
+            <!-- Connector Line 2 -->
+            <div class="flex-1 h-1 bg-success mx-2 -mt-6"></div>
+
+            <!-- Step 3 - Active -->
+
+            <div class="flex flex-col items-center flex-1 relative z-10">
+              <div
+                class="w-12 h-12 rounded-full bg-success flex items-center justify-center text-neutral-50 font-semibold transition-transform duration-200 hover:scale-105"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
+              <span class="mt-2 text-sm font-medium text-neutral-700"
+                >Confirm</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div class="container mx-auto max-w-2xl">
         <!-- Success Checkmarks -->
         <div class="flex justify-center gap-6 mb-12" id="checkmarks">
@@ -200,7 +296,6 @@
             </svg>
           </div>
         </div>
-
         <!-- Success Message -->
         <div class="text-center mb-12">
           <p class="text-lg text-primary mb-2">
@@ -211,7 +306,9 @@
 
         <!-- Dashboard Button -->
         <div class="text-center">
-          <a href="#dashboard" class="btn-secondary"> Go to Dashboard </a>
+          <a href="#dashboard" class="btn-secondary" style="opacity: 100">
+            Go to Dashboard
+          </a>
         </div>
       </div>
     </main>

@@ -162,7 +162,7 @@ document
         buttonText.textContent = "Create Account";
         spinner.classList.add("hidden");
         if (isValid) {
-          window.location.href = "../register-success/register-success.html";
+          window.location.href = "../../Components/auth/register-success.html";
         }
       }, 1500);
     }

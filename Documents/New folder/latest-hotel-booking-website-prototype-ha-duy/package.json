@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel ./src/pages/index.html"
+    "clean": "rm -rf .parcel-cache dist",
+   "dev": "parcel ./src/pages/index.html --no-cache"
   },
   "keywords": [],
   "author": "",

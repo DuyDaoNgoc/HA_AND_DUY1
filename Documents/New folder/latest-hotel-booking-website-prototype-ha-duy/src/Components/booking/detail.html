@@ -38,7 +38,7 @@
       <div class="container mx-auto px-8">
         <div class="flex justify-center">
           <h1 class="text-3xl font-heading font-bold text-primary">
-            LankaStay
+            <a href="/"> LankaStay </a>
           </h1>
         </div>
       </div>
@@ -247,7 +247,6 @@
                   maxlength="19"
                 />
               </div>
-
               <!-- Cardholder Name -->
               <div>
                 <label
@@ -307,16 +306,14 @@
                   type="submit"
                   class="flex-1 px-6 py-3 bg-primary text-primary-foreground font-normal text-base rounded transition-all duration-200 hover:bg-secondary hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                 >
-                  Pay Now
+                  <a href="../booking/confirm.html"> Pay Now </a>
                 </button>
-
-                <button
-                  type="button"
-                  disabled=""
-                  class="flex-1 px-6 py-3 bg-neutral-200 text-neutral-600 font-normal text-base rounded opacity-60 cursor-not-allowed"
+                <a
+                  href="../booking/select.html"
+                  class="flex-1 px-6 py-3 bg-neutral-200 text-neutral-600 font-normal text-base rounded text-center block transition-all duration-200 hover:bg-neutral-300"
                 >
-                  <a href="../booking/select.html"> Cancel </a>
-                </button>
+                  Cancel
+                </a>
               </div>
             </form>
           </div>
@@ -365,82 +362,6 @@
     </script>
 
     <!-- GSAP Animations -->
-    <script>
-      // Page fade-in animation
-      gsap.from("body", {
-        opacity: 0,
-        duration: 0.6,
-        ease: "power2.out",
-      });
-
-      // Progress indicator animation
-      gsap.from("#progress-section .flex.items-center > *", {
-        opacity: 0,
-        x: -30,
-        duration: 0.5,
-        stagger: 0.15,
-        ease: "power2.out",
-        delay: 0.3,
-      });
-
-      // Main content animation
-      gsap.from("#payment-section > div", {
-        opacity: 0,
-        y: 20,
-        duration: 0.6,
-        ease: "power2.out",
-        delay: 0.6,
-      });
-
-      // Form submission handler
-      document
-        .getElementById("payment-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          // Basic validation
-          const cardNumber = document.getElementById("card-number").value;
-          const cardholder = document.getElementById("cardholder").value;
-          const expiry = document.getElementById("expiry").value;
-          const cvv = document.getElementById("cvv").value;
-
-          if (cardNumber && cardholder && expiry && cvv) {
-            // Show loading animation
-            const submitBtn = e.target.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = "Processing...";
-            submitBtn.disabled = true;
-
-            // Simulate payment processing
-            setTimeout(() => {
-              // Redirect to success page
-              window.location.href = "../booking/confirm.html";
-            }, 1500);
-          }
-        });
-
-      // Card number formatting
-      document
-        .getElementById("card-number")
-        .addEventListener("input", function (e) {
-          let value = e.target.value.replace(/\s/g, "");
-          let formattedValue = value.match(/.{1,4}/g)?.join(" ") || value;
-          e.target.value = formattedValue;
-        });
-
-      // Expiry date formatting
-      document.getElementById("expiry").addEventListener("input", function (e) {
-        let value = e.target.value.replace(/\D/g, "");
-        if (value.length >= 2) {
-          value = value.slice(0, 2) + "/" + value.slice(2, 4);
-        }
-        e.target.value = value;
-      });
-
-      // CVV numeric only
-      document.getElementById("cvv").addEventListener("input", function (e) {
-        e.target.value = e.target.value.replace(/\D/g, "");
-      });
-    </script>
+    <script src="../../../js/card_ngan_hang/nganhang.js"></script>
   </body>
 </html>
